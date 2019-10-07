@@ -1,0 +1,13 @@
+<div class="spending-item">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">{{ item.category }}</h3>
+            <div class="card-text">{{ item.description }}</div>
+            <div class="card-text">Money Spent: {{ item.value | currency }}</div>
+            <div class="card-text">Date: {{ item.date | date:'mediumDate' }}</div>
+        </div>
+        <div class="card-footer">
+            <div *ngFor="let tag of item.tags" class="badge badge-primary mr-2">{{ tag }}</div>
+        </div>
+    </div>
+</div>

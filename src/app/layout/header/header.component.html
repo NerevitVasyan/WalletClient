@@ -1,0 +1,38 @@
+<div class="dashboard-header">
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+        <a class="navbar-brand" routerLink="">Wallet</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto navbar-right-top">
+                <li class="nav-item">
+                    <div id="custom-search" class="top-search-bar">
+                        <input class="form-control" type="text" placeholder="Search..">
+                    </div>
+                </li>
+                <li *ngIf="authService.isLoggedIn()" class="nav-item">
+                    <div id="custom-search" class="nav-item dropdown notification">
+                        <a routerLink="add" class="nav-link nav-icons" ><i class="fas fa-plus-square"></i></a>
+                    </div>
+                </li>
+                <li *ngIf="!authService.isLoggedIn()" class="nav-item">
+                    <div id="custom-search" class="nav-item dropdown notification">
+                        <a routerLink="login" class="nav-link nav-icons" >Login</a>
+                    </div>
+                </li>
+                <li *ngIf="!authService.isLoggedIn()" class="nav-item">
+                    <div id="custom-search" class="nav-item dropdown notification">
+                        <a routerLink="register" class="nav-link nav-icons" >Register</a>
+                    </div>
+                </li>
+                <li *ngIf="authService.isLoggedIn()" class="nav-item">
+                    <div (click)="logOut()" id="custom-search" class="nav-item dropdown notification">
+                        <a class="nav-link nav-icons" >Log Out</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

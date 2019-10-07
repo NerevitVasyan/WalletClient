@@ -1,0 +1,26 @@
+<div class="splash-container">
+    <div class="card ">
+        <div class="card-header text-center"><a routerLink=""><h1>WALLET</h1></a><span class="splash-description">Please enter your user information.</span></div>
+        <div class="card-body">
+                <div class="form-group">
+                    <input [(ngModel)]="user.email" class="form-control form-control-lg" id="username" type="text" placeholder="Username" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input [(ngModel)]="user.password" class="form-control form-control-lg" id="password" type="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label class="custom-control custom-checkbox">
+                        <input [(ngModel)]="user.isRemember" class="custom-control-input" type="checkbox"><span class="custom-control-label">Remember Me</span>
+                    </label>
+                </div>
+                <button type="submit" (click)="login()" class="btn btn-primary btn-lg btn-block">Sign in</button>
+        </div>
+        <div class="card-footer bg-white p-0  ">
+            <div class="card-footer-item card-footer-item-bordered">
+                <a routerLink='/register' class="footer-link">Create An Account</a></div>
+            <div class="card-footer-item card-footer-item-bordered">
+                <a routerLink='/forgotpassword' class="footer-link">Forgot Password</a>
+            </div>
+        </div>
+    </div>
+</div>

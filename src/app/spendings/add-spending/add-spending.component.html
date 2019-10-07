@@ -1,0 +1,34 @@
+<div class="add-spending">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 offset-lg-4 offset-md-3 offset-sm-3 offset-0">
+            <div class="card">
+                <h3 class="card-header">Add new Spending</h3>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="col-form-label">Description: </label>
+                        <input [(ngModel)]="item.description" class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Money Spent: </label>
+                        <input [(ngModel)]="item.value" class="form-control" type="number">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Date of spending: </label>
+                        <input [(ngModel)]="item.date" class="form-control" type="date">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Category: </label>
+                        <input [(ngModel)]="item.category" class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Tags: </label>
+                        <input [(ngModel)]="tags" class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success w-100" (click)="addSpending()" >Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
